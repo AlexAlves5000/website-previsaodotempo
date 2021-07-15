@@ -1,5 +1,5 @@
 const path = require('path')
-const express = require('Express')
+const express = require('express')
 const hbs = require('hbs')
 const app = express()
 const geocod = require('./utils/geocod.js')
