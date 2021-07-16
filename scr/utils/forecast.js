@@ -14,7 +14,8 @@ const forecast = (lon, lat, callback) => {
                 temperatura: response.body.current.temperature,
                 chuva: response.body.current.precip,
                 stermica: response.body.current.feelslike,
-                iconedotempo: response.body.current.weather_icons
+                iconedotempo: response.body.current.weather_icons,
+                humidade: response.body.current.humidity
             })
             
         }

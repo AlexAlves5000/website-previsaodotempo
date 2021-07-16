@@ -25,14 +25,14 @@ app.use(express.static(diretorioPublic))
 
 app.get('', (req, res) => {
     res.render('index', {
-        title: 'Weather',
+        title: 'Previsão do Tempo',
         name: "Alexsander"
     })
 })
 
 app.get('/about', (req, res) => {
     res.render('about', {
-        title: "About Me",
+        title: "Sobre",
         name: "Alexsander"
     })
 })
@@ -75,7 +75,8 @@ app.get('/weather', (req, res) => {
                 temperatura: forecastData.temperatura,
                 chuva: forecastData.chuva,
                 stermica: forecastData.stermica,
-                iconedotempo: forecastData.iconedotempo
+                iconedotempo: forecastData.iconedotempo,
+                humidade: forecastData.humidade
             }) 
         })
     })  
@@ -101,35 +102,6 @@ app.get('*', (req, res) => {
         name: "Alexsander"
     });
 })
-
-//app.get('*', (req, res) => {
-//    res.status(404).send("Desculpe, página não encontrada!");
-//})
-
-
-// app.get('/about', (req, res) => {
-//     res.send('<h1>Exercicio Sobre Express: Página Sobre</h1>')
-// })
-
-// const url = 'http://api.weatherstack.com/current?access_key=d8457d643f10c9abc8f80973e2949f27&query=linhares'
-
-// console.log(url)
-// const previsao = (url, callback) => {
-//    request({ url, json: true }, (error, response) => {
-        // console.log(response.body)
-        // app.get('/weather', (req, res) => {
-        //     res.send(response.body) 
-        //     // callback({response})
-        // })
-//    })
-// }
- 
-
-
-// app.get('/weather', (req, res) => {
-//     res.send(previsao)  
-// })
-
 
 app.listen(port, () => { 
     console.log('Servidor Funcionando na Porta:' + port)
