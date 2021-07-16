@@ -39,7 +39,7 @@ app.get('/about', (req, res) => {
 
 app.get('/help', (req, res) => {
     res.render('help', {
-        helptext: "Isso é um texto de Ajuda",
+        helptext: "É facil usar é só colocar o nome do local que pretende pesquisar!",
         title: "Ajuda",
         name: "Alexsander"
     })
